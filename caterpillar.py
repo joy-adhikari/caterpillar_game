@@ -64,24 +64,24 @@ class Caterpillar:
         self.reset()
 
         #head
-        self.head_up = pygame.transform.scale(pygame.image.load("Graphics/head_up.png").convert_alpha(), (cell_size, cell_size))
-        self.head_down = pygame.transform.scale(pygame.image.load("Graphics/head_down.png").convert_alpha(), (cell_size, cell_size))
-        self.head_left = pygame.transform.scale(pygame.image.load("Graphics/head_left.png").convert_alpha(), (cell_size, cell_size))
-        self.head_right = pygame.transform.scale(pygame.image.load("Graphics/head_right.png").convert_alpha(), (cell_size, cell_size))
+        self.head_up = pygame.transform.scale(pygame.image.load("graphics/head_up.png").convert_alpha(), (cell_size, cell_size))
+        self.head_down = pygame.transform.scale(pygame.image.load("graphics/head_down.png").convert_alpha(), (cell_size, cell_size))
+        self.head_left = pygame.transform.scale(pygame.image.load("graphics/head_left.png").convert_alpha(), (cell_size, cell_size))
+        self.head_right = pygame.transform.scale(pygame.image.load("graphics/head_right.png").convert_alpha(), (cell_size, cell_size))
 
         #tail
-        self.tail_up = pygame.transform.scale(pygame.image.load("Graphics/tail_up.png").convert_alpha(), (cell_size, cell_size))
-        self.tail_down = pygame.transform.scale(pygame.image.load("Graphics/tail_down.png").convert_alpha(), (cell_size, cell_size))
-        self.tail_left = pygame.transform.scale(pygame.image.load("Graphics/tail_left.png").convert_alpha(), (cell_size, cell_size))
-        self.tail_right = pygame.transform.scale(pygame.image.load("Graphics/tail_right.png").convert_alpha(), (cell_size, cell_size))
+        self.tail_up = pygame.transform.scale(pygame.image.load("graphics/tail_up.png").convert_alpha(), (cell_size, cell_size))
+        self.tail_down = pygame.transform.scale(pygame.image.load("graphics/tail_down.png").convert_alpha(), (cell_size, cell_size))
+        self.tail_left = pygame.transform.scale(pygame.image.load("graphics/tail_left.png").convert_alpha(), (cell_size, cell_size))
+        self.tail_right = pygame.transform.scale(pygame.image.load("graphics/tail_right.png").convert_alpha(), (cell_size, cell_size))
 
         #body
-        self.body_vertical = pygame.transform.scale(pygame.image.load("Graphics/body_vertical.png").convert_alpha(), (cell_size, cell_size))
-        self.body_horizontal = pygame.transform.scale(pygame.image.load("Graphics/body_horizontal.png").convert_alpha(), (cell_size, cell_size))
-        self.body_tl = pygame.transform.scale(pygame.image.load("Graphics/body_tl.png").convert_alpha(), (cell_size, cell_size))
-        self.body_tr = pygame.transform.scale(pygame.image.load("Graphics/body_tr.png").convert_alpha(), (cell_size, cell_size))
-        self.body_bl = pygame.transform.scale(pygame.image.load("Graphics/body_bl.png").convert_alpha(), (cell_size, cell_size))
-        self.body_br = pygame.transform.scale(pygame.image.load("Graphics/body_br.png").convert_alpha(), (cell_size, cell_size))
+        self.body_vertical = pygame.transform.scale(pygame.image.load("graphics/body_vertical.png").convert_alpha(), (cell_size, cell_size))
+        self.body_horizontal = pygame.transform.scale(pygame.image.load("graphics/body_horizontal.png").convert_alpha(), (cell_size, cell_size))
+        self.body_tl = pygame.transform.scale(pygame.image.load("graphics/body_tl.png").convert_alpha(), (cell_size, cell_size))
+        self.body_tr = pygame.transform.scale(pygame.image.load("graphics/body_tr.png").convert_alpha(), (cell_size, cell_size))
+        self.body_bl = pygame.transform.scale(pygame.image.load("graphics/body_bl.png").convert_alpha(), (cell_size, cell_size))
+        self.body_br = pygame.transform.scale(pygame.image.load("graphics/body_br.png").convert_alpha(), (cell_size, cell_size))
 
         #sound
         self.chomp_sound = pygame.mixer.Sound("sound/chomp.wav")
