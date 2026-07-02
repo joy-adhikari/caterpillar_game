@@ -1,73 +1,169 @@
-# Caterpillar Game
+# 🐛 Caterpillar Game
 
-#### Video Demo: https://youtu.be/U-qQDXNydD8
-
----
-
-## Description
-
-**Caterpillar Game** is a classic arcade-style game inspired by the traditional Snake game, developed as my **CS50 Final Project**. The goal of the game is simple: control a growing caterpillar, eat fruits to increase your score, and avoid collisions with walls or with the caterpillar’s own body. While the core idea is familiar, the implementation focuses on clean structure, multiple game states, user-friendly controls, and visual polish, making it a complete and playable desktop game rather than a minimal demo.
-
-The project is written in **Python** using the **Pygame** library. Pygame provides the tools required for handling graphics, keyboard input, sound, and timing, making it suitable for building a real-time interactive game. This project demonstrates my understanding of event-driven programming, game loops, object-oriented design, and state management.
+A fun classic-style caterpillar game built with **Python** and **Pygame**. Guide your caterpillar around the screen, eat food to grow longer, and avoid crashing into walls or yourself!
 
 ---
 
-## Motivation and Learning Process
+## 📋 Table of Contents
 
-I initially learned the fundamentals of a snake-style game from online resources, including YouTube tutorials, to understand how movement, collision detection, and grid-based games work. From there, I extended the project significantly by designing my own structure, adding features, fixing bugs, and improving usability. I also used AI-based tools (such as ChatGPT) as a learning aid to clarify concepts, debug errors, and refine certain parts of the code. In accordance with CS50’s academic honesty policy, any such assistance was treated as supportive guidance, not a replacement for my own work, and the final design and implementation reflect my understanding.
+- [Features](#-features)
+- [Requirements](#-requirements)
+- [How to Download from GitHub](#-how-to-download-from-github)
+- [How to Play](#-how-to-play)
+- [Controls](#-controls)
+- [Contributing](#-contributing)
 
----
-
-## Gameplay Overview
-
-When the game starts, the player is presented with a **menu screen** that explains the controls and allows the game to begin. Once started, the caterpillar moves continuously across a grid-based board. The player controls its direction using the keyboard arrow keys. Each time the caterpillar eats a fruit, its length increases and the score goes up.
-
-The game ends when the caterpillar collides with the boundary of the screen or with its own body. When this happens, a **Game Over screen** is displayed, clearly informing the player that the session has ended. The player can then choose to exit the game or restart, depending on the implemented controls.
-
-A **pause feature** is also included, allowing the player to temporarily stop the game. This improves usability and demonstrates proper state handling in a real-time application.
 
 ---
 
-## Key Features
+## ✨ Features
 
-- **Grid-based movement**: The caterpillar moves smoothly on a fixed grid, ensuring predictable and fair gameplay.
-- **Multiple game states**: The game includes menu, playing, paused, and game-over states, each handled explicitly in the code.
-- **Score tracking**: The score increases as the caterpillar eats fruits and is displayed on the screen.
-- **Collision detection**: The game accurately detects collisions with walls and the caterpillar’s own body.
-- **Randomized fruit spawning**: Fruits spawn at random positions while avoiding the caterpillar’s body.
-- **Visual overlays**: Transparent overlays are used for pause and game-over screens to enhance visual clarity.
-- **Keyboard controls**: Intuitive controls using arrow keys, with additional keys for pausing and quitting.
+- Simple, addictive gameplay
+- Smooth caterpillar movement and growth mechanics
+- Score tracking
+- Built entirely with Python's Pygame library
 
 ---
 
-## Technical Design
+## 🛠 Requirements
 
-The project follows an **object-oriented design**. Separate classes are used to represent the caterpillar, the fruit, and the main game controller. This separation of concerns makes the code easier to read, debug, and extend. The main game loop is responsible for handling events, updating the game state, and rendering graphics at a fixed frame rate.
+- Python 3.8 or higher
+- pip (Python package installer)
+- Git (to clone the repository)
 
-Pygame’s event system is used to capture keyboard input, while its rendering functions handle drawing the background, caterpillar segments, fruit, text, and overlays. Timing is managed using a clock to ensure consistent speed across different systems.
-
----
-
-## Challenges and Solutions
-
-One of the main challenges was managing the **drawing order** of elements on the screen, especially when implementing pause and game-over overlays. Incorrect draw order initially caused black or invisible screens. This was resolved by carefully structuring the render sequence so that the background is drawn first, followed by game elements, and finally overlays and text.
-
-Another challenge was ensuring that the fruit never spawns inside the caterpillar’s body. This was solved by checking generated positions against the caterpillar’s segments and regenerating the fruit position if necessary.
+All Python dependencies are listed in `requirements.txt`.
 
 ---
 
-## Academic Honesty and AI Usage
+## 📥 How to Download from GitHub
 
-For this final project, I made limited use of AI-based tools as permitted by CS50’s guidelines. These tools were used to:
-- Clarify Python and Pygame concepts
-- Help debug specific errors
-- Improve code readability and structure
+Follow these steps to get the game running on your machine:
 
-All design decisions, logic, and final implementation are my own, and I understand the code I have written. Any AI assistance is acknowledged in the code comments where applicable.
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/joy-adhikari/caterpillar_game.git
+```
+
+### 2. Navigate into the project folder
+
+```bash
+cd caterpillar_game
+```
+
+### 3. (Recommended) Create a virtual environment
+
+This keeps your project dependencies isolated from other Python projects.
+
+**Windows:**
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+**macOS / Linux:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 4. Install the dependencies
+
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
-## Conclusion
+## ▶️ How to Play
 
-The Caterpillar Game represents my progress throughout CS50, combining foundational programming concepts with practical problem-solving and creativity. While inspired by a classic game, this project goes beyond a basic tutorial by incorporating multiple game states, polished UI elements, and thoughtful structure. It demonstrates my ability to learn from resources, apply knowledge independently, and build a complete, functional software project from start to finish.
+Once everything is installed, run the game with:
 
+```bash
+python caterpillar.py
+```
+
+The game window will open, and you can start playing immediately!
+
+**Objective:** Guide the caterpillar to eat food and grow as long as possible without hitting the walls or your own body.
+
+---
+
+## 🎮 Controls
+
+| Key            | Action           |
+|----------------|------------------|
+| ↑ Arrow Key    | Move Up          |
+| ↓ Arrow Key    | Move Down        |
+| ← Arrow Key    | Move Left        |
+| → Arrow Key    | Move Right       |
+| Esc            | Quit Game        |
+| Space          | Pause / Resume   |
+
+> Adjust this table to match your actual key bindings.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome and appreciated! Here's how you can help improve the Caterpillar Game:
+
+### 1. Fork the repository
+
+Click the **Fork** button at the top right of the GitHub repo page to create your own copy.
+
+### 2. Clone your fork
+
+```bash
+git clone https://github.com/joy-adhikari/caterpillar_game.git
+cd caterpillar_game
+```
+
+### 3. Create a new branch
+
+Always create a separate branch for your changes — never work directly on `main`.
+
+```bash
+git checkout -b feature/your-feature-name
+```
+
+Use a descriptive branch name, e.g. `fix/collision-bug` or `feature/add-scoreboard`.
+
+### 4. Make your changes
+
+- Write clean, readable code and follow existing code style.
+- Add comments where necessary.
+- Test your changes locally before submitting.
+
+### 5. Commit your changes
+
+```bash
+git add .
+git commit -m "Add: short description of your change"
+```
+
+### 6. Push to your fork
+
+```bash
+git push origin feature/your-feature-name
+```
+
+### 7. Open a Pull Request
+
+Go to the original repository on GitHub and click **New Pull Request**. Describe:
+- What you changed
+- Why you changed it
+- Any screenshots (if it's a visual change)
+
+### Contribution Guidelines
+
+- Keep pull requests focused on a single feature or fix.
+- Update `requirements.txt` if you add a new dependency.
+- Be respectful and constructive in code reviews and discussions.
+- Report bugs or suggest features by opening an [Issue](../../issues).
+
+---
+
+### 🌟 Enjoyed the game?
+
+Give the repo a ⭐ on GitHub — it helps others discover the project too!
